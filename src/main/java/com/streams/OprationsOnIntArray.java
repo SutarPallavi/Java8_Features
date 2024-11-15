@@ -1,6 +1,7 @@
 package com.streams;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -50,6 +51,11 @@ public class OprationsOnIntArray {
         System.out.print("Print avg ");
         List<Integer> numList = Arrays.asList(1,2,4,3,7,5,6,9,8);
         numList.stream().mapToInt(i->i).average().ifPresent(avg -> System.out.println("Avg "+ avg));
+        
+        //print 2nd highest element 
+        List<Integer> intList = Arrays.asList(4,2,1,6,3,5,9,8,10,7);
+        int n = intList.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get();
+        System.out.println(n);
 	}
 
 	private static void pushZerosToEnd(int[] arrayNum) {
