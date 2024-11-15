@@ -113,7 +113,7 @@ public class StreamFucntions {
 		List<Integer> list3 = Arrays.asList( 3, 4, 7, 9, 2, 10);
 		employeeList.add(new Employee(3, "Sayali", "Pune", list3));
 		List<Integer> list4 = Arrays.asList(1, 8, 10, 6, 5);
-		employeeList.add(new Employee(4, "Shubham", "Pune", list4));
+		employeeList.add(new Employee(4, "Uma", "Pune", list4));
 		
 		Set<Integer> tasks= employeeList.stream().flatMap(emp -> emp.getTasks().stream().distinct()).collect(Collectors.toSet());
 		System.out.println(".flatMap(emp -> emp.getTasks().stream().distinct()) method result: " + tasks);
